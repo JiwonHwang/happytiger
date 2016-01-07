@@ -49,4 +49,4 @@ class Migration(migrations.Migration):
             name='reviews',
             field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='restaurants.Review'),
         ),
-    ]s
+    ]
