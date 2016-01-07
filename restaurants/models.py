@@ -8,10 +8,10 @@ class Restaurant(models.Model):
     address = models.TextField()
     country = models.CharField(max_length=30)
     album = models.ForeignKey(
-        'Photo',
+        'Photo', blank=True, null=True
     )
     reviews = models.ForeignKey(
-        'Review',
+        'Review', blank=True, null=True
     )
 
 class Photo(models.Model):
