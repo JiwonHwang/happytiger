@@ -10,4 +10,5 @@ def about(request):
     return render(request, 'restaurants/about.html')
 
 def restaurants(request):
-    return render(request, 'restaurants/restaurants.html')
+    restaurants = Restaurant.objects.all()
+    return render(request, 'restaurants/restaurants.html', {"restaurants": restaurants})

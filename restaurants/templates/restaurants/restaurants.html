@@ -1,5 +1,16 @@
 <html>
  <div>
-  <h1>Restaurants list </h1>
+  <h1>Restaurants </h1>
  </div>
+
+ {% for restaurant in restaurants %}
+  <img src={{restaurant.album.photo.url}}>
+  <h2>{{ restaurant.name }}</h2>
+  <p>{{ restaurant.rating }}</p>
+  <p>{{ restaurnat.descriotion }}</p>
+  <p>{{ restaurnat.address }}</p>
+  <p>{{ restaurant.country }}</p>
+  <p>{{ restaurnat.reviews }}</p>
+ {% endfor%}
+
 </html>

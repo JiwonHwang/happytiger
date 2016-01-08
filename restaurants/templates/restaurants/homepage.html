@@ -3,10 +3,14 @@
     <h1><a href="/">Happy Tiger</a></h1>
   </div>
 
-  {% for photo in album %}
-    <img src={{photo.photo.url}}>
+  {% for picture in album %}
+    <img src={{picture.photo.url}}>
   {% endfor %}
-  {# {% for review in reviews %}#}
-    {# {{review}}#}
+  {% for review in new_review %}
+   <h2>{{ review.title }}</h2>
+   <p>{{ review.ratings }}</p>
+   <p>{{ review.comment }}</p>
+  {% endfor%}
+
 
 </html>
