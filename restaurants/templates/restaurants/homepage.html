@@ -1,8 +1,96 @@
 <html>
+<head>
+ <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="http://ironsummitmedia.github.io/startbootstrap-modern-business/css/modern-business.css" media="screen" title="no title" charset="utf-8">
+</head>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Bootstrap theme</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+  <div style="padding:50px">
+
   <div>
-    <h1><a href="/">Happy Tiger</a></h1>
+    <h1>Happy Tiger</h1>
   </div>
 
+
+     <!-- Header Carousel -->
+     <header id="myCarousel" class="carousel slide">
+         <!-- Indicators -->
+         <ol class="carousel-indicators">
+             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+             <li data-target="#myCarousel" data-slide-to="1"></li>
+             <li data-target="#myCarousel" data-slide-to="2"></li>
+         </ol>
+
+         <!-- Wrapper for slides -->
+         <div class="carousel-inner">
+             <div class="item active">
+                 <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
+                 <div class="carousel-caption">
+                     <h2>Caption 1</h2>
+                 </div>
+             </div>
+             <div class="item">
+                 <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
+                 <div class="carousel-caption">
+                     <h2>Caption 2</h2>
+                 </div>
+             </div>
+             <div class="item">
+                 <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
+                 <div class="carousel-caption">
+                     <h2>Caption 3</h2>
+                 </div>
+             </div>
+         </div>
+
+         <!-- Controls -->
+         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+             <span class="icon-prev"></span>
+         </a>
+         <a class="right carousel-control" href="#myCarousel" data-slide="next">
+             <span class="icon-next"></span>
+         </a>
+     </header>
+
+   <p>
   {% for picture in album %}
     <img src={{picture.photo.url}}>
   {% endfor %}
@@ -11,6 +99,11 @@
    <p>{{ review.ratings }}</p>
    <p>{{ review.comment }}</p>
   {% endfor%}
+ </p>
 
-
+ <script>
+     $('.carousel').carousel({
+         interval: 5000 //changes the speed
+     })
+     </script>
 </html>

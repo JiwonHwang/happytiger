@@ -4,13 +4,14 @@
  </div>
 
  {% for restaurant in restaurants %}
-  <img src={{restaurant.album.photo.url}}>
+  <img src="{{restaurant.album.photo.url}}" width=100>
+
   <h2>{{ restaurant.name }}</h2>
   <p>{{ restaurant.rating }}</p>
-  <p>{{ restaurnat.descriotion }}</p>
+  <p>{{ restaurant.description }}</p>
   <p>{{ restaurnat.address }}</p>
   <p>{{ restaurant.country }}</p>
   <p>{{ restaurnat.reviews }}</p>
- {% endfor%}
+ {% endfor %}
 
 </html>
